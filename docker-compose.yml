@@ -1,0 +1,16 @@
+services:
+  countries-app:
+    image: node:18-alpine
+    command: sh -c "npm install && npm start"
+    ports:
+      - 3000:3000
+    working_dir: countries-app
+    volumes:
+      - ./:/countries-app
+  countries-api:
+    image: python:3.11-alpine
+    ports:
+      - 8000:8000
+    volumes:
+      
+
