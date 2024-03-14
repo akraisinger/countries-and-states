@@ -1,5 +1,5 @@
 FROM python:3.11-alpine
-WORKDIR /countries_and_states_api
+WORKDIR /countries-api
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .

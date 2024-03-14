@@ -1,5 +1,5 @@
 FROM node:18-alpine
-WORKDIR /countries-and-states-app-typescript
+WORKDIR /countries-app
 COPY package.json .
 RUN npm install
 COPY . .
