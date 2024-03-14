@@ -23,7 +23,7 @@ const CreateStates: React.FC = ():ReactElement => {
     fetch('http://localhost:8000/api/countries/')
       .then(response => response.json())
       .then(data => setCountries(data.sort(compareByName)))
-      .catch(error => console.error(error));
+      .catch(ex => console.log(ex));
   }, []);
 
   const handleAdd = () => {
