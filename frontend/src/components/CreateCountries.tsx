@@ -9,9 +9,10 @@ const CreateCountries: React.FC = ():ReactElement => {
   }
   const [countries, setCountries] = useState([]);
   useEffect(() => {
+    document.title = 'Create Countries';
     axios.get('http://localhost:8000/api/countries/').then((response)=> {
       setCountries(response.data);
-    });
+    }).catch(ex => console.log(ex));
   }, []);
   
   const checkCountries = (clist:Array<Country>, iname:string, icode:string) => {

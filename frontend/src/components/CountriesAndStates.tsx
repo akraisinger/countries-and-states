@@ -16,6 +16,7 @@ const CountriesAndStates: React.FC = ():ReactElement => {
   }
 
   useEffect(() => {
+    document.title = 'Home';
     axios.get('http://localhost:8000/api/countries/').then((response)=> {
       setCountries(response.data.sort(compareByName));
     }).catch(ex => console.log(ex));
@@ -38,6 +39,7 @@ const CountriesAndStates: React.FC = ():ReactElement => {
   }
   
   return (
+    
     <div>
       <div><h1>Countries & States</h1></div>
       <label> Countries: 

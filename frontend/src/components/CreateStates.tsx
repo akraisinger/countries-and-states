@@ -20,10 +20,10 @@ const CreateStates: React.FC = ():ReactElement => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/countries/')
-      .then(response => response.json())
-      .then(data => setCountries(data.sort(compareByName)))
-      .catch(ex => console.log(ex));
+    document.title = 'Create States';
+    axios.get('http://localhost:8000/api/countries/').then((response)=> {
+      setCountries(response.data.sort(compareByName));
+    }).catch(ex => console.log(ex));
   }, []);
 
   const handleAdd = () => {
