@@ -1,4 +1,4 @@
-env
+/env
 __pycache__
 /api/__pycache__
-/countries_and_states_api/__pycache__
+/backend/__pycache__
