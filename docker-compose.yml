@@ -1,10 +1,12 @@
 services:
   app:
-    build: ./frontend
+    build:
+      context: ./frontend
+      target: dev
     ports:
       - 3000:3000
     volumes:
-      - ./frontend/:/countries-and-states/frontend
+      - ./frontend:/frontend
   api:
     build: ./backend
     ports:
