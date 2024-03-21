@@ -2,9 +2,9 @@ services:
   app:
     build:
       context: ./frontend
-      target: dev
+      target: prod
     ports:
-      - 3000:3000
+      - 3000:80
     volumes:
       - ./frontend:/frontend
   api:
