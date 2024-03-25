@@ -41,7 +41,7 @@ const CountriesAndStates: React.FC = ():ReactElement => {
   return (
     
     <div>
-      <div><h1>Countries & States!!!</h1></div>
+      <div><h1>Countries & States</h1></div>
       <label> Countries: 
       <select id="Country" style={{marginLeft: "10px"}} onChange={onChangeHandler}>
         <option value="">-- Pick a Country --</option>

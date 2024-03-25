@@ -8,6 +8,10 @@ services:
     volumes:
       - ./frontend:/frontend
   api:
-    build: ./backend
+    build:
+      context: ./backend
+      target: prod
     ports:
       - 8000:8000
+    volumes:
+      - ./backend:/backend
