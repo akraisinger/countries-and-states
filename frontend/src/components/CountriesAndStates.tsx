@@ -45,22 +45,22 @@ const CountriesAndStates: React.FC = ():ReactElement => {
       <label> Countries: 
       <select id="Country" style={{marginLeft: "10px"}} onChange={onChangeHandler}>
         <option value="">-- Pick a Country --</option>
-      {countries.map((country:CountryOrState) => {
-         return (
-            <option value={country.code} key={country.id}>{country.name}</option>
-         );
-      })}
+        {countries.map((country:CountryOrState) => {
+          return (
+              <option value={country.code} key={country.id}>{country.name}</option>
+          );
+        })}
       </select>
       </label>
 
       <label id="States" style={{marginLeft: "20px"}}> States: 
       <select name="States" id="States" style={{marginLeft: "10px"}}>
-      <option value="">-- Pick a State --</option>
-      {states.map((state: CountryOrState) => {
-         return (
-            <option id={state.code} key={state.id}>{state.name}</option>
-         );
-      })}
+        <option value="">-- Pick a State --</option>
+        {states.map((state: CountryOrState) => {
+          return (
+              <option id={state.code} key={state.id}>{state.name}</option>
+          );
+        })}
       </select>
       </label>
     </div>
